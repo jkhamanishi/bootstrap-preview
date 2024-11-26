@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import parseArgs from 'minimist-lite'
 import fs from 'node:fs/promises'
 import express from 'express'
