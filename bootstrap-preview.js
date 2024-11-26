@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import parseArgs from 'minimist-lite'
+import path from 'node:path'
 import fs from 'node:fs/promises'
 import express from 'express'
 import { createServer } from 'vite'
@@ -15,6 +16,7 @@ const autoOpen = false
 // Get CLI args
 const argv = parseArgs(process.argv.slice(2))
 const cssFile = argv._[0]
+const templateFile = path.join(path.dirname(process.argv[1]), "preview", "index.html")
 
 // Create http server
 const app = express()
@@ -34,7 +36,7 @@ app.use(vite.middlewares)
 app.use('*all', async (req, res) => {
   try {
     const url = req.originalUrl.replace(base, '')
-    let template = await fs.readFile('./preview/index.html', 'utf-8')
+    let template = await fs.readFile(templateFile, 'utf-8')
     template = await vite.transformIndexHtml(url, template)  // This is necessary. Do not delete.
     
     const placeholder = `<!--css-placeholder-->`
