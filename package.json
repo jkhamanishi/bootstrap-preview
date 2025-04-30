@@ -1,8 +1,9 @@
 {
   "name": "bootstrap-preview",
   "description": "Preview your Bootstrap theme!",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Jackson Hamanishi",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "preview": "node bootstrap-preview node_modules/bootstrap/dist/css/bootstrap.css"
@@ -29,5 +30,13 @@
   },
   "bugs": {
     "url": "https://github.com/jkhamanishi/bootstrap-preview/issues"
-  }
+  },
+  "keywords": [
+    "bootstrap",
+    "preview",
+    "css",
+    "theme",
+    "style",
+    "styles"
+  ]
 }
