@@ -2,7 +2,7 @@
 
 ## Installation
 ```
-npm install https://github.com/jkhamanishi/bootstrap-preview.git --save-dev
+npm install bootstrap-preview --save-dev
 ```
 
 ## Usage

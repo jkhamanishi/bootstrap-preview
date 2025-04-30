@@ -3,9 +3,8 @@
   "description": "Preview your Bootstrap theme!",
   "author": "Jackson Hamanishi",
   "type": "module",
-  "main": "bootstrap-preview.js",
   "scripts": {
-    "preview": "node bootstrap-preview test/bootstrap.css"
+    "preview": "node bootstrap-preview node_modules/bootstrap/dist/css/bootstrap.css"
   },
   "bin": {
     "bootstrap-preview": "bootstrap-preview.js"
@@ -14,6 +13,20 @@
     "express": "^5.0.1",
     "minimist-lite": "^2.2.1",
     "open": "^10.1.0",
-    "vite": "^5.4.8"
+    "vite": "^6.3.3"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.5"
+  },
+  "files": [
+    "bootstrap-preview.js",
+    "preview"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkhamanishi/bootstrap-preview"
+  },
+  "bugs": {
+    "url": "https://github.com/jkhamanishi/bootstrap-preview/issues"
   }
 }
